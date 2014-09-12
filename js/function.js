@@ -1,3 +1,11 @@
 $(document).ready(function(){
-    console.log("Estoy funcionando...");
+    
+    $('.dropdown').prepend('<p>Description</p>');
+    
+    var $dropdown = $('.dropdown ul').hide();
+    
+    $('a.arrow').click(function(){
+        $($dropdown).slideToggle();
+    });
+    
 });
