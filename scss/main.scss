@@ -1,73 +1,103 @@
+/* BASE */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-    background:  #f4f4f4 url('../img/bg.jpg');
-    font-family: 'Roboto', sans-serif;
+    background: #CBA328;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    margin-bottom: 60px;
+    padding: 1.5em;
+}
+
+h1, h2, p, a {
+    text-align: center;
 }
 
 h1 {
-    color: #333;
-    text-align: center;
-    margin: 60px 0;
+    margin: 40px 0;
+    font-weight: 700;
+    font-size: 4.5em;
+    text-shadow: 4px 4px 0 rgba(0,0,0,.15);
 }
 
+h2 {
+    font-size: 1.5em;
+    font-weight: 300;  
+}
+
+h3 {
+    color: rgba(0,0,0,.3);
+}
+
+
+/* DROPDOWN */
+
 .dropdown {
-    width: 400px;
-    margin: auto;
+    max-width: 400px;
+    margin: 40px auto 0;
     
-    
-    div {
-        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    &__box {
+
         width: 100%;
         height: 60px;
         line-height: 60px;
-        color: #999;
+        color: rgba(0,0,0,.3);
         font-weight: 700;
         font-size: 16px;
         padding: 0 0 0 20px;
         border-radius: 6px;
-        border: 1px solid #aaa;
+        border: 1px solid rgba(0,0,0,.3);;
         float: left;
         margin: 0 0 10px 0;
+
+        .arrow {
+            float: right;
+            display: block;
+            padding: 30px;
+            border-left: 1px solid rgba(0,0,0,.3);;
+        
+        }
+
     }
     
-    a.arrow {
-        float: right;
-        display: block;
-        padding: 30px;
-        background: url('../img/arrow-down.png') no-repeat center;
-        border-left: 1px solid #aaa;
-    
-    }
-    
-    ul{
+    &__list {
         list-style: none;
         display: block;
         clear: both;
         margin: auto;
-        border: 1px solid #aaa;
+        border: 1px solid rgba(0,0,0,.3);
+        padding: 0;
         
-        li {
+        &__item {
         
             a {
                 float: none;
                 padding: 12px;
-                border-bottom: 1px solid #aaa;
+                border-bottom: 1px solid rgba(0,0,0,.3);;
                 width: 100%;
                 display: block;
                 text-decoration: none;
-                color: #999;
+                color: rgba(0,0,0,.3);;
                 
                 &:hover {
-                    background: #f4f4f4;
+                    background: rgba(0,0,0,.1);
+                    color: white;
                 }
             }
             
-            &:last-child a{
+            &:last-child a {
                 border: none;
             }
         }
